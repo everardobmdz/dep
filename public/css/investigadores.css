@@ -1,0 +1,149 @@
+/* Investigadores */
+.investigador-container{
+    position: relative;
+    background-color: white;
+    height: 330px;
+    top: 100px;
+    transition: all 1s ease;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.investigador-container::before{
+    transition: all 1s ease-in-out;
+    content: "";
+    background-color: #3373c4;
+    clip-path: polygon(0 0, 100% 0%, 0 25%, 0 25%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    border-radius: 5px;
+
+}
+
+.investigador-img{
+    border-radius: 50%;
+    left: 50%;
+    top: -120px;
+    transform: translateX(-50%);
+    position: absolute;
+    background-position: top;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 1s ease-in-out;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+}
+.investigador-container:hover{
+    transform: scale(1.04);
+}
+.investigador-container a {
+    text-decoration: none;
+    color: var(--bs-body-color);
+    text-align: center;
+}
+
+.investigador-descripcion{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    flex-direction: column;
+}
+.investigador-descripcion span{
+    /* font-size: 0.75em; */
+    font-weight: 400;
+    color: #3373c4;
+}
+.investigador-descripcion h3{
+    font-size: 1.5em;
+    font-weight: 600;
+    color:rgba(0, 0, 0, 0.7);
+    transition: all 0.5s ease-in-out;
+}
+.investigador-container:hover h3{
+    color: #003396;
+}
+.investigador-descripcion p{
+    text-align: justify;
+    font-size: 1rem;
+}
+
+
+/* Investigador modal */
+.imgInvestigador-modal{
+    max-width: 300px;
+    position: relative;
+}
+.imgInvestigador-modal img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 0 10% 10%;
+    box-shadow: 0 0 10px 0px rgb(0 0 0 / 50%);
+
+}
+.descripcionInvestigador-modal{
+    list-style: none;
+    font-size: 1.1rem;
+    line-height: 2;
+    font-weight: bolder;
+    overflow-wrap: break-word;
+}
+
+.tab-content {
+    font-size: 1.1rem;
+    text-align: justify;    
+}
+.tab-content ul {
+    list-style: disc;
+}
+.investigador-col{
+    height: 485px;
+}
+/* Fin investigador Modal */
+@media only screen and (max-width: 1200px){
+    .investigador-container{
+        height: 210px;
+    }
+    .investigador-descripcion p {
+        display: none;
+    }
+    .investigador-col{
+        height: 365px;
+    }
+
+}
+@media only screen and (max-width: 992px){
+    .investigador-container{
+        height: 200px;
+    }
+    .investigador-descripcion p {
+        display: none;
+    }
+    
+}
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+
+    .investigador-container{
+        height: 280px;
+    }
+    .investigador-container p {
+        display: inline;
+    }
+    .investigador-col{
+        height: 460px;
+    }
+  
+  }
