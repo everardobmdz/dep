@@ -61,7 +61,7 @@ class BusquedaController extends Controller
             
             if($resultado){
                 $id = $resultado->id;
-                $titulo = class_basename($resultado) == 'Investigador' ? $resultado->grado.' '.$resultado->nombre.' '.$resultado->apellido : $resultado->titulo;
+                $titulo = class_basename($resultado) == 'Investigador' ? $resultado->grado_academico.' '.$resultado->nombre.' '.$resultado->apellidos : $resultado->titulo;
                 $descripcion = class_basename($resultado) == 'Investigador' ? strip_tags($resultado->biografia) : strip_tags($resultado->descripcion);
                 $descripcionforSubstr = strtolower($descripcion);
                 $descripcionforSubstr = str_replace(
