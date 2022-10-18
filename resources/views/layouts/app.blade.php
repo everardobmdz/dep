@@ -136,7 +136,7 @@
                                 <a class="nav-link" href="{{route('noticias.index')}}">Noticias</a>
                             </li>
                             <li class="nav-item border-end-0">
-                                <a class="nav-link" href="#">Contacto</a>
+                                <a class="nav-link" href="{{route('contacto.index')}}">Contacto</a>
                             </li>
                         </ul>
                         <form class="d-lg-none d-flex">

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AppController;
 use App\Http\Controllers\BusquedaController;
+use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InvestigadorController;
 use App\Http\Controllers\LibroController;
@@ -49,6 +50,8 @@ Route::resource('investigadores',InvestigadorController::class)->names('investig
 Route::resource('libros', LibroController::class)->names('libros');
 Route::resource('publicaciones',PublicacionController::class)->names('publicaciones');
 Route::resource('busqueda',BusquedaController::class)->names('busqueda');
+Route::resource('contacto',ContactoController::class)->names('contacto');
 Route::get('app',[AppController::class,'index'])->name('app.index');
+
 
 Route::get('/files/{filename}', [NoticiaArchivoController::class,'download']);
