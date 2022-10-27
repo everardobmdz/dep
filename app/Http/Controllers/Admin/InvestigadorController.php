@@ -151,7 +151,7 @@ class InvestigadorController extends Controller
             $investigador->imagen_path = $imagen_path;
         }
 
-        $investigador->lineas_investigacion()->attach($request->input('lineas-investigacion'));
+        $investigador->lineas_investigacion()->sync($request->input('lineas-investigacion'));
         $investigador->update();
         return redirect()->route('admin.investigadores.index')->with(array(
             'message' => 'El investigador se ha actualizado correctamente'

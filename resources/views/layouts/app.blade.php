@@ -42,7 +42,7 @@
     <body>
         <div class="loader" id="loader">
             <h1 class="title-loader mx-auto text-center">
-                Departamento de Estudios del Pacifico
+                Departamento de Estudios del Pacífico
             </h1>
             
         </div>

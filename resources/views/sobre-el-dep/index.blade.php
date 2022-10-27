@@ -192,7 +192,7 @@ aria-hidden="true"
     <script>
         function modalLoad(investigador, lineas_investigacion, proyectos_actuales, publicaciones) {
 
-            console.log(proyectos_actuales);
+           
 
             $('#nombre').html(investigador.grado_academico+" "+investigador.nombre+" "+investigador.apellidos);
             $('#img-investigador').attr('src','/storage/images/investigadores/'+investigador.imagen_path);
@@ -202,6 +202,11 @@ aria-hidden="true"
             $('#correo').attr('href','mailto:'+investigador.correo);
             $('#descripciones').html(investigador.descripciones);
             $('#pills-biografia').html(investigador.biografia);
+
+
+            $('#lineas-lista').empty();
+            $('#lista-proyectos-actuales').empty();
+            $('#lista-publicaciones').empty();
 
             lineas_investigacion.forEach(function(linea) {
                 $('#lineas-lista').append('<li>'+linea.nombre+'</li>');

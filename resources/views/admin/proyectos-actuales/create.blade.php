@@ -19,14 +19,7 @@
                     <h2>Captura de Proyecto Actual</h2>
                 </div>
                 <hr>
-                <script type="text/javascript">
-            
-                    $(document).ready(function() {
-                        $('#js-example-basic-single').select2();
-    
-                    });
-    
-                </script>
+               
     
             </div>
     
@@ -63,7 +56,7 @@
                         <div class="row align-items-center">
                             <div class="col-md-12">
                                 <label class="font-weight-bold" for="investigador_id">Investigador*</label>
-                                <select class="form-control" id="investigador_id" name="investigador_id">
+                                <select class="form-control js-example-basic-single" id="investigador_id" name="investigador_id">
                                     <option disabled selected>Elegir</option>
                                     @foreach ($investigadores as $investigador)
                                         <option value="{{$investigador->id}}">{{$investigador->id.'. '.$investigador->nombre.' '.$investigador->apellidos}}</option>
@@ -101,11 +94,12 @@
 @stop
 
 @section('css')
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <style>
         /* Select2 */
+        
         .select2-selection__choice {
             color: #666 !important;
-            padding-left: 25px !important;
         }
         /* Fin Select2 */
     </style>
@@ -114,10 +108,21 @@
 @section('js')
     <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
     <script>
+        
         ClassicEditor
             .create( document.querySelector( '#descripcion' ) )
             .catch( error => {
                 console.error( error );
             } );
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script type="text/javascript">
+            
+        $(document).ready(function() {
+            $('.js-example-basic-single').select2();
+
+        });
+
     </script>
 @stop

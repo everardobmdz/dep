@@ -95,7 +95,7 @@
                             <h3 class=""><a href="{{route('noticias.show',$noticia->id)}}">{{$noticia->titulo}}</a></h3>
                             <div class="description-noticia">
                                 <p>
-                                    {!!substr($noticia->descripcion,0,200)."..."!!}
+                                    {!!strip_tags(substr($noticia->descripcion,0,200))."..."!!}
                                 </p>
                             </div>
                             <div class="d-flex align-items-center mt-4">

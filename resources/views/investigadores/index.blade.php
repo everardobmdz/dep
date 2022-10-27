@@ -200,6 +200,10 @@
             $('#descripciones').html(investigador.descripciones);
             $('#pills-biografia').html(investigador.biografia);
 
+            $('#lineas-lista').empty();
+            $('#lista-proyectos-actuales').empty();
+            $('#lista-publicaciones').empty();
+
             lineas_investigacion.forEach(function(linea) {
                 $('#lineas-lista').append('<li>'+linea.nombre+'</li>');
             })

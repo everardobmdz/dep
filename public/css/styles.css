@@ -428,6 +428,10 @@ svg{
     width: 100%;
     object-fit: contain;
 }
+.noticia-contenido h3 {
+    height: 65px;
+    overflow: hidden;
+}
 /* Fin noticias */
 
 /* Libros */

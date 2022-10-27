@@ -2,7 +2,7 @@
 .investigador-container{
     position: relative;
     background-color: white;
-    height: 330px;
+    height: 285px;
     top: 100px;
     transition: all 1s ease;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);

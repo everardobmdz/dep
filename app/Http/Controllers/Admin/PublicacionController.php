@@ -135,7 +135,7 @@ class PublicacionController extends Controller
 
 
         $publicacion->save();
-        $publicacion->investigadores()->attach($request->input('investigadores'));
+        $publicacion->investigadores()->sync($request->input('investigadores'));
         $publicacion->update();
 
         $files = $request->file('files');
